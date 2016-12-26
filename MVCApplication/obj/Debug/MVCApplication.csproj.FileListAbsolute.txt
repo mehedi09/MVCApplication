@@ -30,3 +30,9 @@ F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csproj.GenerateResourc
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.dll
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.pdb
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csprojResolveAssemblyReference.cache
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.Common.dll
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WinForms.dll
+F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.cache
+F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.compiled

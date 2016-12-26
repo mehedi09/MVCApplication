@@ -27,27 +27,40 @@
             <div class="table-responsive">
 
 
+
                 <table class="table">
                     <tr>
                         <th style="display:none;">
-                            @Html.DisplayNameFor(model => model.StudentID)
+                            @MVCApplication.Resources.ModelResource.StudentID
+                            @*@Html.DisplayNameFor(model => model.StudentID)*@
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.StudentName)
+                            @MVCApplication.Resources.ModelResource.Student_StudentName
+                            @*@Html.DisplayNameFor(model => model.StudentName)*@
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.AcademicYear)
+                            @MVCApplication.Resources.ModelResource.Student_ClassAcademicYear_ID
+                            @*@Html.DisplayNameFor(model => model.AcademicYear)*@
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.ClassName)
+                            @MVCApplication.Resources.ModelResource.Student_Classes_ID
+                            @*@Html.DisplayNameFor(model => model.ClassName)*@
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.SectionName)
+                            @MVCApplication.Resources.ModelResource.Student_ClassSection_ID
+                            @*@Html.DisplayNameFor(model => model.SectionName)*@
                         </th>
-                        <th></th>
+                        <th>Edit/Delete</th>
                     </tr>
+                    <tbody id="studentListTable">
 
-                    @foreach (var item in Model)
+                    </tbody>
+
+
+                </table>
+            </div>
+
+            @*  @foreach (var item in Model)
                     {
                         <tr>
                             <td style="display:none;">
@@ -74,12 +87,13 @@
                         </tr>
                     }
 
-                </table>
-            </div>
+                </table>*@
         </div>
     </div>
+</div>
 
 </div>
+<script src="~/Scripts/MVCAppJavaScript.js"></script>
 <script>
     $(document).ready(function () {
         var _divWillShow = true;
@@ -89,34 +103,18 @@
 
             $('#Student_list').toggle();
             if (_divWillShow) {
-                $('#btn_viewList').text("Hide Text");
+                $('#btn_viewList').text("Hide List");
                 _divWillShow = false;
+                LoadStudentList();
             }
             else {
-                $('#btn_viewList').text("Show Text");
+                $('#btn_viewList').text("Show List");
                 _divWillShow = true;
-
             }
-
-
-
-            //    $('#Student_list').toggle(function () {
-
-            //        //  var a = $('#Student_list').is(':visible');
-
-            //        if ($('#btn_viewList').text == "Show List") {
-            //            // alert(a);
-            //            $('#btn_viewList').text == "Hide List"
-            //         //   $('#btn_viewList').html('Hide List');
-            //        }
-            //        else{
-            //            //  alert(a);
-            //            $('#btn_viewList').text == "Show List";
-            //            //$('#btn_viewlist').html('Show list');
-            //        }
-
-
-            //});
         });
     });
+
+
+    //test
+
 </script>

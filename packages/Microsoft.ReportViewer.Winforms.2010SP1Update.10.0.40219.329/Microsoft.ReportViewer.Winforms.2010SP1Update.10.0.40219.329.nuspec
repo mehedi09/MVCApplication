@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.ReportViewer.Winforms.2010SP1Update</id>
+    <version>10.0.40219.329</version>
+    <title>Microsoft Report Viewer 2010 SP1 Windows Forms Update</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Microsoft Report Viewer 2010 SP1 Redistributable Package update includes controls for viewing reports designed using Microsoft Reporting Technology</description>
+    <summary>Reporting controls for Windows Forms</summary>
+    <releaseNotes>This update fixes two Report Viewer functionality issues that occur after you install Microsoft Visual Studio 2010 Service Pack 1 (SP1). See http://support.microsoft.com/kb/2549864</releaseNotes>
+    <copyright>Microsoft Corporation</copyright>
+    <tags>report viewer reporting windows forms controls</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Windows.Forms" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

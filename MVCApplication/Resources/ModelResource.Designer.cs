@@ -158,5 +158,14 @@ namespace MVCApplication.Resources {
                 return ResourceManager.GetString("Student_StudentPassword", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StudentID.
+        /// </summary>
+        public static string StudentID {
+            get {
+                return ResourceManager.GetString("StudentID", resourceCulture);
+            }
+        }
     }
 }

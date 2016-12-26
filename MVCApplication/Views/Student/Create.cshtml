@@ -76,7 +76,7 @@
                             <div class="col-md-8">
                                 @*@Html.EditorFor(model => model.Student_ClassSection_ID)*@
                                 @*@Html.DropDownListFor(model => model.Student_ClassSection_ID, ViewBag.SectionName as SelectList, "--Select--", new { @class = "form-control col-md-2" })*@
-                                <select id="DDL_SectionID" name="DDL_SectionID" class="form-control col-md-2"></select>
+                                <select id="Student_ClassSection_ID" name="Student_ClassSection_ID" class="form-control col-md-2"></select>
 
                                 @Html.ValidationMessageFor(model => model.Student_ClassSection_ID)
                             </div>
@@ -160,24 +160,14 @@
 
 
     </div>
-    @*</div>*@
-
-
 }
 
 <script src="~/Scripts/MVCAppJavaScript.js"></script>
 <script>
     $(document).ready(function () {
         GetDateTimePicker($("#Student_AdmissionDate"));
-        //$("#leftDiv").fadeIn();
-        //$("#rightDiv").fadeIn("slow");
-        //$("#leftBottomDiv").fadeIn(3000);
-
+      
     });
-
-
-
-
     $('#Student_Classes_ID').on('change', function () {
         var value = $('#Student_Classes_ID').val();
 
