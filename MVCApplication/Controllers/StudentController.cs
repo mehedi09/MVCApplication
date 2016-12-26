@@ -36,7 +36,7 @@ namespace MVCApplication.Controllers
                          ClassName = C.Classes_ClassName,
                          SectionName = CS.ClassSection_SectionName
 
-                     });
+                     }).ToList();
 
             return View(model);
 
@@ -77,7 +77,7 @@ namespace MVCApplication.Controllers
             try
             {
                 dbContext.t_Student.Add(student);
-               // dbContext.t_Classes.Add()
+            
                 dbContext.SaveChanges();
 
                 return RedirectToAction("Index");
@@ -87,12 +87,8 @@ namespace MVCApplication.Controllers
                 return View(student);
             }
 
-            // return View();
+           
         }
-       //  [HttpGet]
-        //public ActionResult Edit(string id)
-        //{
-
-        //}
+      
     }
 }

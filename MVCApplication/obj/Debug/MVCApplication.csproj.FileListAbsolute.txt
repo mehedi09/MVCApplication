@@ -29,3 +29,4 @@ F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.Resources.ModelResourc
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csproj.GenerateResource.Cache
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.dll
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.pdb
+F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csprojResolveAssemblyReference.cache

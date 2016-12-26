@@ -115,6 +115,15 @@ namespace MVCApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Admited.
+        /// </summary>
+        public static string Student_IsAdmited {
+            get {
+                return ResourceManager.GetString("Student_IsAdmited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Roll Number.
         /// </summary>
         public static string Student_RollNumber {

@@ -147,4 +147,7 @@
   <data name="Student_StudentPassword" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Student_IsAdmited" xml:space="preserve">
+    <value>Is Admited</value>
+  </data>
 </root>

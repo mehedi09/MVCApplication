@@ -104,15 +104,18 @@
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Student_StudentPassword, new { @class = "control-label col-md-4" })
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_StudentPassword</label>
+                            @*@Html.LabelFor(model => model.Student_StudentPassword, new { @class = "control-label col-md-4" })*@
                             <div class="col-md-8">
+
                                 @Html.EditorFor(model => model.Student_StudentPassword, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Student_StudentPassword)
                             </div>
                         </div>
 
                         <div class="form-group" id="divApplicantGender">
-                            @Html.LabelFor(model => model.Student_ApplicantGender, new { @class = "control-label col-md-4" })
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_ApplicantGender</label>
+                            @*@Html.LabelFor(model => model.Student_ApplicantGender, new { @class = "control-label col-md-4" })*@
                             <div class="col-md-8">
                                 @* @Html.EditorFor(model => model.Student_ApplicantGender)*@
                                 @Html.DropDownListFor(model => model.Student_ApplicantGender, ViewBag.AplicantGender as SelectList, "--Select--", new { @class = "form-control col-md-2" })
@@ -123,7 +126,8 @@
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Student_BloodGroup, new { @class = "control-label col-md-4" })
+                            @*@Html.LabelFor(model => model.Student_BloodGroup, new { @class = "control-label col-md-4" })*@
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_BloodGroup</label>
                             <div class="col-md-8">
                                 @Html.EditorFor(model => model.Student_BloodGroup, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Student_BloodGroup)
@@ -131,7 +135,8 @@
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Student_IsAdmited, new { @class = "control-label col-md-4" })
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_IsAdmited</label>
+                            @*@Html.LabelFor(model => model.Student_IsAdmited, new { @class = "control-label col-md-4" })*@
                             <div class="col-md-8">
                                 @Html.EditorFor(model => model.Student_IsAdmited, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Student_IsAdmited)
