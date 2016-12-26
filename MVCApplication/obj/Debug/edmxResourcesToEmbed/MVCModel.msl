@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCTESTModelStoreContainer" CdmEntityContainer="MVCTESTEntities">
+    <EntitySetMapping Name="t_ClassAcademicYear">
+      <EntityTypeMapping TypeName="MVCTESTModel.t_ClassAcademicYear">
+        <MappingFragment StoreEntitySet="t_ClassAcademicYear">
+          <ScalarProperty Name="ClassAcademicYear_ID" ColumnName="ClassAcademicYear_ID" />
+          <ScalarProperty Name="ClassAcademicYear_AcademicYearStart" ColumnName="ClassAcademicYear_AcademicYearStart" />
+          <ScalarProperty Name="ClassAcademicYear_AcademicYearEnd" ColumnName="ClassAcademicYear_AcademicYearEnd" />
+          <ScalarProperty Name="ClassAcademicYear_AcademicYear" ColumnName="ClassAcademicYear_AcademicYear" />
+          <ScalarProperty Name="ClassAcademicYear_Session" ColumnName="ClassAcademicYear_Session" />
+          <ScalarProperty Name="ClassAcademicYear_IsActive" ColumnName="ClassAcademicYear_IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_Classes">
+      <EntityTypeMapping TypeName="MVCTESTModel.t_Classes">
+        <MappingFragment StoreEntitySet="t_Classes">
+          <ScalarProperty Name="Classes_ID" ColumnName="Classes_ID" />
+          <ScalarProperty Name="Classes_ClassName" ColumnName="Classes_ClassName" />
+          <ScalarProperty Name="Classes_Active" ColumnName="Classes_Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_ClassSection">
+      <EntityTypeMapping TypeName="MVCTESTModel.t_ClassSection">
+        <MappingFragment StoreEntitySet="t_ClassSection">
+          <ScalarProperty Name="ClassSection_ID" ColumnName="ClassSection_ID" />
+          <ScalarProperty Name="ClassSection_SectionName" ColumnName="ClassSection_SectionName" />
+          <ScalarProperty Name="ClassSection_ClassID" ColumnName="ClassSection_ClassID" />
+          <ScalarProperty Name="ClassSection_IsActive" ColumnName="ClassSection_IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_Student">
+      <EntityTypeMapping TypeName="MVCTESTModel.t_Student">
+        <MappingFragment StoreEntitySet="t_Student">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_StudentName" ColumnName="Student_StudentName" />
+          <ScalarProperty Name="Student_AdmissionDate" ColumnName="Student_AdmissionDate" />
+          <ScalarProperty Name="Student_Classes_ID" ColumnName="Student_Classes_ID" />
+          <ScalarProperty Name="Student_ClassSection_ID" ColumnName="Student_ClassSection_ID" />
+          <ScalarProperty Name="Student_RollNumber" ColumnName="Student_RollNumber" />
+          <ScalarProperty Name="Student_StudentCardNo" ColumnName="Student_StudentCardNo" />
+          <ScalarProperty Name="Student_StudentPassword" ColumnName="Student_StudentPassword" />
+          <ScalarProperty Name="Student_ClassAcademicYear_ID" ColumnName="Student_ClassAcademicYear_ID" />
+          <ScalarProperty Name="Student_ApplicantGender" ColumnName="Student_ApplicantGender" />
+          <ScalarProperty Name="Student_BloodGroup" ColumnName="Student_BloodGroup" />
+          <ScalarProperty Name="Student_IsAdmited" ColumnName="Student_IsAdmited" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_Gender">
+      <EntityTypeMapping TypeName="MVCTESTModel.t_Gender">
+        <MappingFragment StoreEntitySet="t_Gender">
+          <ScalarProperty Name="Gender_GenderName" ColumnName="Gender_GenderName" />
+          <ScalarProperty Name="Gender_ID" ColumnName="Gender_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

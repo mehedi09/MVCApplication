@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MVCTESTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t_ClassAcademicYear">
+          <Key>
+            <PropertyRef Name="ClassAcademicYear_ID" />
+          </Key>
+          <Property Name="ClassAcademicYear_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassAcademicYear_AcademicYearStart" Type="datetime" />
+          <Property Name="ClassAcademicYear_AcademicYearEnd" Type="datetime" />
+          <Property Name="ClassAcademicYear_AcademicYear" Type="varchar" MaxLength="50" />
+          <Property Name="ClassAcademicYear_Session" Type="varchar" MaxLength="50" />
+          <Property Name="ClassAcademicYear_IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="t_Classes">
+          <Key>
+            <PropertyRef Name="Classes_ID" />
+          </Key>
+          <Property Name="Classes_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Classes_ClassName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classes_Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="t_ClassSection">
+          <Key>
+            <PropertyRef Name="ClassSection_ID" />
+          </Key>
+          <Property Name="ClassSection_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassSection_SectionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClassSection_ClassID" Type="int" />
+          <Property Name="ClassSection_IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_Gender">
+          <Key>
+            <PropertyRef Name="Gender_ID" />
+          </Key>
+          <Property Name="Gender_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gender_GenderName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t_Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Student_StudentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Student_AdmissionDate" Type="datetime" />
+          <Property Name="Student_Classes_ID" Type="int" />
+          <Property Name="Student_ClassSection_ID" Type="int" />
+          <Property Name="Student_RollNumber" Type="int" />
+          <Property Name="Student_StudentCardNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Student_StudentPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Student_ClassAcademicYear_ID" Type="int" />
+          <Property Name="Student_ApplicantGender" Type="int" />
+          <Property Name="Student_BloodGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="Student_IsAdmited" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="MVCTESTModelStoreContainer">
+          <EntitySet Name="t_ClassAcademicYear" EntityType="Self.t_ClassAcademicYear" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Classes" EntityType="Self.t_Classes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_ClassSection" EntityType="Self.t_ClassSection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Gender" EntityType="Self.t_Gender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Student" EntityType="Self.t_Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MVCTESTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t_ClassAcademicYear">
+          <Key>
+            <PropertyRef Name="ClassAcademicYear_ID" />
+          </Key>
+          <Property Name="ClassAcademicYear_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassAcademicYear_AcademicYearStart" Type="DateTime" Precision="3" />
+          <Property Name="ClassAcademicYear_AcademicYearEnd" Type="DateTime" Precision="3" />
+          <Property Name="ClassAcademicYear_AcademicYear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassAcademicYear_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassAcademicYear_IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="t_Classes">
+          <Key>
+            <PropertyRef Name="Classes_ID" />
+          </Key>
+          <Property Name="Classes_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Classes_ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classes_Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="t_ClassSection">
+          <Key>
+            <PropertyRef Name="ClassSection_ID" />
+          </Key>
+          <Property Name="ClassSection_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassSection_SectionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClassSection_ClassID" Type="Int32" />
+          <Property Name="ClassSection_IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t_Student">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+          </Key>
+          <Property Name="Student_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Student_StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Student_AdmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="Student_Classes_ID" Type="Int32" />
+          <Property Name="Student_ClassSection_ID" Type="Int32" />
+          <Property Name="Student_RollNumber" Type="Int32" />
+          <Property Name="Student_StudentCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Student_StudentPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Student_ClassAcademicYear_ID" Type="Int32" />
+          <Property Name="Student_ApplicantGender" Type="Int32" />
+          <Property Name="Student_BloodGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Student_IsAdmited" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="MVCTESTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_ClassAcademicYear" EntityType="Self.t_ClassAcademicYear" />
+          <EntitySet Name="t_Classes" EntityType="Self.t_Classes" />
+          <EntitySet Name="t_ClassSection" EntityType="Self.t_ClassSection" />
+          <EntitySet Name="t_Student" EntityType="Self.t_Student" />
+          <EntitySet Name="t_Gender" EntityType="MVCTESTModel.t_Gender" />
+        </EntityContainer>
+        <EntityType Name="t_Gender">
+          <Key>
+            <PropertyRef Name="Gender_ID" />
+          </Key>
+          <Property Name="Gender_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gender_GenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MVCTESTModelStoreContainer" CdmEntityContainer="MVCTESTEntities">
+          <EntitySetMapping Name="t_ClassAcademicYear">
+            <EntityTypeMapping TypeName="MVCTESTModel.t_ClassAcademicYear">
+              <MappingFragment StoreEntitySet="t_ClassAcademicYear">
+                <ScalarProperty Name="ClassAcademicYear_ID" ColumnName="ClassAcademicYear_ID" />
+                <ScalarProperty Name="ClassAcademicYear_AcademicYearStart" ColumnName="ClassAcademicYear_AcademicYearStart" />
+                <ScalarProperty Name="ClassAcademicYear_AcademicYearEnd" ColumnName="ClassAcademicYear_AcademicYearEnd" />
+                <ScalarProperty Name="ClassAcademicYear_AcademicYear" ColumnName="ClassAcademicYear_AcademicYear" />
+                <ScalarProperty Name="ClassAcademicYear_Session" ColumnName="ClassAcademicYear_Session" />
+                <ScalarProperty Name="ClassAcademicYear_IsActive" ColumnName="ClassAcademicYear_IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_Classes">
+            <EntityTypeMapping TypeName="MVCTESTModel.t_Classes">
+              <MappingFragment StoreEntitySet="t_Classes">
+                <ScalarProperty Name="Classes_ID" ColumnName="Classes_ID" />
+                <ScalarProperty Name="Classes_ClassName" ColumnName="Classes_ClassName" />
+                <ScalarProperty Name="Classes_Active" ColumnName="Classes_Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_ClassSection">
+            <EntityTypeMapping TypeName="MVCTESTModel.t_ClassSection">
+              <MappingFragment StoreEntitySet="t_ClassSection">
+                <ScalarProperty Name="ClassSection_ID" ColumnName="ClassSection_ID" />
+                <ScalarProperty Name="ClassSection_SectionName" ColumnName="ClassSection_SectionName" />
+                <ScalarProperty Name="ClassSection_ClassID" ColumnName="ClassSection_ClassID" />
+                <ScalarProperty Name="ClassSection_IsActive" ColumnName="ClassSection_IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_Student">
+            <EntityTypeMapping TypeName="MVCTESTModel.t_Student">
+              <MappingFragment StoreEntitySet="t_Student">
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="Student_StudentName" ColumnName="Student_StudentName" />
+                <ScalarProperty Name="Student_AdmissionDate" ColumnName="Student_AdmissionDate" />
+                <ScalarProperty Name="Student_Classes_ID" ColumnName="Student_Classes_ID" />
+                <ScalarProperty Name="Student_ClassSection_ID" ColumnName="Student_ClassSection_ID" />
+                <ScalarProperty Name="Student_RollNumber" ColumnName="Student_RollNumber" />
+                <ScalarProperty Name="Student_StudentCardNo" ColumnName="Student_StudentCardNo" />
+                <ScalarProperty Name="Student_StudentPassword" ColumnName="Student_StudentPassword" />
+                <ScalarProperty Name="Student_ClassAcademicYear_ID" ColumnName="Student_ClassAcademicYear_ID" />
+                <ScalarProperty Name="Student_ApplicantGender" ColumnName="Student_ApplicantGender" />
+                <ScalarProperty Name="Student_BloodGroup" ColumnName="Student_BloodGroup" />
+                <ScalarProperty Name="Student_IsAdmited" ColumnName="Student_IsAdmited" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_Gender">
+            <EntityTypeMapping TypeName="MVCTESTModel.t_Gender">
+              <MappingFragment StoreEntitySet="t_Gender">
+                <ScalarProperty Name="Gender_GenderName" ColumnName="Gender_GenderName" />
+                <ScalarProperty Name="Gender_ID" ColumnName="Gender_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

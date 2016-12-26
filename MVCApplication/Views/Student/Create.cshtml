@@ -1,0 +1,198 @@
+﻿@model MVCApplication.t_Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <br />
+    <div class="col-md-12">
+
+        <div class="form-horizontal">
+
+
+            @Html.ValidationSummary(true)
+
+            @*<div class="col-md-12 bs-callout bs-callout-warning">*@
+
+
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Student Admission Information </h3>
+                </div>
+                <div class="panel-body">
+
+                    <div data-name="leftDiv" id="leftDiv" class="col-md-6">
+
+                        <div class="form-group">
+
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_StudentName</label>
+
+                            @*@Html.LabelFor(model => model.Student_StudentName, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_StudentName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_StudentName)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_ClassAcademicYear_ID</label>
+                            @*@Html.LabelFor(model => model.Student_ClassAcademicYear_ID, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @*@Html.EditorFor(model => model.Student_ClassAcademicYear_ID)*@
+                                @Html.DropDownListFor(model => model.Student_ClassAcademicYear_ID, ViewBag.AcademicYear as SelectList, "--Select--", new { @class = "form-control col-md-2" })
+
+
+                                @Html.ValidationMessageFor(model => model.Student_ClassAcademicYear_ID)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_AdmissionDate</label>
+                            @*@Html.LabelFor(model => model.Student_AdmissionDate, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_AdmissionDate, "{0:dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_AdmissionDate)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_Classes_ID</label>
+                            @*@Html.LabelFor(model => model.Student_Classes_ID, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Student_Classes_ID, ViewBag.ClassName as SelectList, "--Select--", new { @class = "form-control col-md-2" })
+                                @Html.ValidationMessageFor(model => model.Student_Classes_ID)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_ClassSection_ID</label>
+                            @*@Html.LabelFor(model => model.Student_ClassSection_ID, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @*@Html.EditorFor(model => model.Student_ClassSection_ID)*@
+                                @*@Html.DropDownListFor(model => model.Student_ClassSection_ID, ViewBag.SectionName as SelectList, "--Select--", new { @class = "form-control col-md-2" })*@
+                                <select id="DDL_SectionID" name="DDL_SectionID" class="form-control col-md-2"></select>
+
+                                @Html.ValidationMessageFor(model => model.Student_ClassSection_ID)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_RollNumber</label>
+                            @*@Html.LabelFor(model => model.Student_RollNumber, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_RollNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_RollNumber)
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div data-div="rightDiv" id="rightDiv" class="col-md-6 clearfix">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_StudentCardNo</label>
+                            @*@Html.LabelFor(model => model.Student_StudentCardNo, new { @class = "control-label col-md-4" })*@
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_StudentCardNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_StudentCardNo)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student_StudentPassword, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_StudentPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_StudentPassword)
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="divApplicantGender">
+                            @Html.LabelFor(model => model.Student_ApplicantGender, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @* @Html.EditorFor(model => model.Student_ApplicantGender)*@
+                                @Html.DropDownListFor(model => model.Student_ApplicantGender, ViewBag.AplicantGender as SelectList, "--Select--", new { @class = "form-control col-md-2" })
+
+
+                                @Html.ValidationMessageFor(model => model.Student_ApplicantGender)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student_BloodGroup, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_BloodGroup, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_BloodGroup)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Student_IsAdmited, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Student_IsAdmited, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Student_IsAdmited)
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-div="leftBottomDiv" id="leftBottomDiv" class="col-md-12">
+                        <div class="col-md-offset-4">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    @*</div>*@
+
+
+}
+
+<script src="~/Scripts/MVCAppJavaScript.js"></script>
+<script>
+    $(document).ready(function () {
+        GetDateTimePicker($("#Student_AdmissionDate"));
+        //$("#leftDiv").fadeIn();
+        //$("#rightDiv").fadeIn("slow");
+        //$("#leftBottomDiv").fadeIn(3000);
+
+    });
+
+
+
+
+    $('#Student_Classes_ID').on('change', function () {
+        var value = $('#Student_Classes_ID').val();
+
+        if (value == 1) {
+            $('#divApplicantGender').hide();
+
+        }
+        else {
+            $('#divApplicantGender').show();
+
+
+        }
+        LoadSectionsByClassChange();
+    });
+
+</script>
+
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+
+

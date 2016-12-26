@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCTESTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="t_ClassAcademicYear">
+    <Key>
+      <PropertyRef Name="ClassAcademicYear_ID" />
+    </Key>
+    <Property Name="ClassAcademicYear_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassAcademicYear_AcademicYearStart" Type="DateTime" Precision="3" />
+    <Property Name="ClassAcademicYear_AcademicYearEnd" Type="DateTime" Precision="3" />
+    <Property Name="ClassAcademicYear_AcademicYear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassAcademicYear_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClassAcademicYear_IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="t_Classes">
+    <Key>
+      <PropertyRef Name="Classes_ID" />
+    </Key>
+    <Property Name="Classes_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Classes_ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Classes_Active" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="t_ClassSection">
+    <Key>
+      <PropertyRef Name="ClassSection_ID" />
+    </Key>
+    <Property Name="ClassSection_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassSection_SectionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClassSection_ClassID" Type="Int32" />
+    <Property Name="ClassSection_IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_AdmissionDate" Type="DateTime" Precision="3" />
+    <Property Name="Student_Classes_ID" Type="Int32" />
+    <Property Name="Student_ClassSection_ID" Type="Int32" />
+    <Property Name="Student_RollNumber" Type="Int32" />
+    <Property Name="Student_StudentCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_StudentPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_ClassAcademicYear_ID" Type="Int32" />
+    <Property Name="Student_ApplicantGender" Type="Int32" />
+    <Property Name="Student_BloodGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_IsAdmited" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="MVCTESTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="t_ClassAcademicYear" EntityType="Self.t_ClassAcademicYear" />
+    <EntitySet Name="t_Classes" EntityType="Self.t_Classes" />
+    <EntitySet Name="t_ClassSection" EntityType="Self.t_ClassSection" />
+    <EntitySet Name="t_Student" EntityType="Self.t_Student" />
+    <EntitySet Name="t_Gender" EntityType="MVCTESTModel.t_Gender" />
+  </EntityContainer>
+  <EntityType Name="t_Gender">
+    <Key>
+      <PropertyRef Name="Gender_ID" />
+    </Key>
+    <Property Name="Gender_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gender_GenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

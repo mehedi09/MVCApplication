@@ -1,0 +1,9 @@
+﻿Generated model file: MVCModel.edmx.
+Loading metadata from the database took 00:00:02.1758287.
+Generating the model took 00:00:01.8829600.
+Generated model file: MVCModel.edmx.
+Loading metadata from the database took 00:00:00.5552177.
+Generating the model took 00:00:00.3887347.
+Generated model file: MVCModel.edmx.
+Loading metadata from the database took 00:00:00.5663303.
+Generating the model took 00:00:00.4101952.

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCTESTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="t_ClassAcademicYear">
+    <Key>
+      <PropertyRef Name="ClassAcademicYear_ID" />
+    </Key>
+    <Property Name="ClassAcademicYear_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassAcademicYear_AcademicYearStart" Type="datetime" />
+    <Property Name="ClassAcademicYear_AcademicYearEnd" Type="datetime" />
+    <Property Name="ClassAcademicYear_AcademicYear" Type="varchar" MaxLength="50" />
+    <Property Name="ClassAcademicYear_Session" Type="varchar" MaxLength="50" />
+    <Property Name="ClassAcademicYear_IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="t_Classes">
+    <Key>
+      <PropertyRef Name="Classes_ID" />
+    </Key>
+    <Property Name="Classes_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Classes_ClassName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Classes_Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="t_ClassSection">
+    <Key>
+      <PropertyRef Name="ClassSection_ID" />
+    </Key>
+    <Property Name="ClassSection_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassSection_SectionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClassSection_ClassID" Type="int" />
+    <Property Name="ClassSection_IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_Gender">
+    <Key>
+      <PropertyRef Name="Gender_ID" />
+    </Key>
+    <Property Name="Gender_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gender_GenderName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="t_Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Student_StudentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_AdmissionDate" Type="datetime" />
+    <Property Name="Student_Classes_ID" Type="int" />
+    <Property Name="Student_ClassSection_ID" Type="int" />
+    <Property Name="Student_RollNumber" Type="int" />
+    <Property Name="Student_StudentCardNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_StudentPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_ClassAcademicYear_ID" Type="int" />
+    <Property Name="Student_ApplicantGender" Type="int" />
+    <Property Name="Student_BloodGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_IsAdmited" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="MVCTESTModelStoreContainer">
+    <EntitySet Name="t_ClassAcademicYear" EntityType="Self.t_ClassAcademicYear" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Classes" EntityType="Self.t_Classes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_ClassSection" EntityType="Self.t_ClassSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Gender" EntityType="Self.t_Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Student" EntityType="Self.t_Student" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

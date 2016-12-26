@@ -1,0 +1,122 @@
+﻿@model IEnumerable<MVCApplication.ViewModels.StudentInfoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<div class="col-md-12">
+    <div class="col-md-offset-4 form-group">
+
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-default" })
+
+        <button type="button" id="btn_viewList" class="btn btn-default">Show List</button>
+
+    </div>
+
+
+</div>
+
+<div class="col-md-12">
+
+    <div id="Student_list">
+
+        <div class="bs-callout bs-callout-warning">
+            <div class="table-responsive">
+
+
+                <table class="table">
+                    <tr>
+                        <th style="display:none;">
+                            @Html.DisplayNameFor(model => model.StudentID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.StudentName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AcademicYear)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ClassName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SectionName)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="display:none;">
+
+                                @Html.DisplayFor(modelItem => item.StudentID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.StudentName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AcademicYear)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ClassName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SectionName)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(document).ready(function () {
+        var _divWillShow = true;
+        $('#Student_list').hide();
+
+        $('#btn_viewList').click(function () {
+
+            $('#Student_list').toggle();
+            if (_divWillShow) {
+                $('#btn_viewList').text("Hide Text");
+                _divWillShow = false;
+            }
+            else {
+                $('#btn_viewList').text("Show Text");
+                _divWillShow = true;
+
+            }
+
+
+
+            //    $('#Student_list').toggle(function () {
+
+            //        //  var a = $('#Student_list').is(':visible');
+
+            //        if ($('#btn_viewList').text == "Show List") {
+            //            // alert(a);
+            //            $('#btn_viewList').text == "Hide List"
+            //         //   $('#btn_viewList').html('Hide List');
+            //        }
+            //        else{
+            //            //  alert(a);
+            //            $('#btn_viewList').text == "Show List";
+            //            //$('#btn_viewlist').html('Show list');
+            //        }
+
+
+            //});
+        });
+    });
+</script>
