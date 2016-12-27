@@ -140,7 +140,8 @@ namespace MVCApplication.Controllers
 
 
 
-            return View(StudentEdit); //RedirectToAction("Detals");
+            //return View(StudentEdit); 
+            return RedirectToAction("~/Report/AppReportViewer.aspx/?id="+id);
         }
         //Action result for ajax call
         public ActionResult GetSectionByClassId(int ClassID)

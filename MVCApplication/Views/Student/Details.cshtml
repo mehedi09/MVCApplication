@@ -1,8 +1,41 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Report</h2>
+@*@Html.Partial("AppReportViewer")*@
+<iframe id="ifrmReportViewer" frameborder="0" scrolling="no"
+        style="width:99% ; height:3500px"></iframe>
 
-@Html.Partial("Report.aspx")
+
+
+<script>
+
+    $(document).ready(
+        function () {
+            ReportCheck();
+        });
+    function ReportCheck() {
+        //  alert("alart");
+        // URL = "facebook.com";
+        URL = "~/Report/AppReportViewer.aspx";
+        var myfram = document.getElementById('ifrmReportViewer');
+        if (myfram !== null) {
+            alert(myfram);
+            if (myfram.src) {
+                alert(URL);
+                myfram.src = URL;
+            }
+        }
+        else if (myfram.contentWindow !== null && myfram.contentWindow.location !== null) {
+            //  alert(URL);
+            myfram.contentWindow.location = URL;
+        }
+        else {
+            // alert(URL);
+            myfram.setAttribute('src', URL);
+        }
+        return false;
+    };
+</script>

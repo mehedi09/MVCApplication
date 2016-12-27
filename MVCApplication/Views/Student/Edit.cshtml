@@ -29,8 +29,14 @@
 
                     <div data-name="leftDiv" id="leftDiv" class="col-md-6">
 
-                        @Html.EditorFor(model => model.Student_ID, new { htmlAttributes = new { @class = "form-control",
-                       @style = "display:none;" } })
+                        @Html.EditorFor(model => model.Student_ID, new
+                   {
+                       htmlAttributes = new
+                       {
+                           @class = "form-control",
+                           @style = "display:none;"
+                       }
+                   })
 
 
 
@@ -60,7 +66,9 @@
                             <label class="control-label col-md-4">@MVCApplication.Resources.ModelResource.Student_AdmissionDate</label>
                             @*@Html.LabelFor(model => model.Student_AdmissionDate, new { @class = "control-label col-md-4" })*@
                             <div class="col-md-8">
-                                @Html.EditorFor(model => model.Student_AdmissionDate, "{0:dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.EditorFor(model => model.Student_AdmissionDate,"{dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+                                @*@Html.TextBoxFor(m => m.StartDate,
+                                    new { @Value = Model.StartDate.ToString("yyyy/MM/dd"), @class = "datepicker" })*@
                                 @Html.ValidationMessageFor(model => model.Student_AdmissionDate)
                             </div>
                         </div>

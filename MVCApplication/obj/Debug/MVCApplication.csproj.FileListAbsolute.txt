@@ -4,6 +4,10 @@ F:\MVCApplication\MVCApplication\bin\MVCApplication.pdb
 F:\MVCApplication\MVCApplication\bin\Antlr3.Runtime.dll
 F:\MVCApplication\MVCApplication\bin\EntityFramework.dll
 F:\MVCApplication\MVCApplication\bin\EntityFramework.SqlServer.dll
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.Common.dll
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WebForms.DLL
+F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WinForms.dll
 F:\MVCApplication\MVCApplication\bin\Microsoft.Web.Infrastructure.dll
 F:\MVCApplication\MVCApplication\bin\Newtonsoft.Json.dll
 F:\MVCApplication\MVCApplication\bin\System.Web.Helpers.dll
@@ -27,12 +31,8 @@ F:\MVCApplication\MVCApplication\bin\Newtonsoft.Json.xml
 F:\MVCApplication\MVCApplication\bin\Antlr3.Runtime.pdb
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.Resources.ModelResource.resources
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csproj.GenerateResource.Cache
+F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.cache
+F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.compiled
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.dll
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.pdb
 F:\MVCApplication\MVCApplication\obj\Debug\MVCApplication.csprojResolveAssemblyReference.cache
-F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.Common.dll
-F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
-F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WebForms.DLL
-F:\MVCApplication\MVCApplication\bin\Microsoft.ReportViewer.WinForms.dll
-F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.cache
-F:\MVCApplication\MVCApplication\obj\Debug\RdlCompile.compiled
